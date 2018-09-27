@@ -1,0 +1,7 @@
+<h1><%= @ingredient.name %></h1>
+
+<h3>Recipes that include <%= @ingredient.name %>:</h3>
+
+<% @ingredient.recipes.each do |r| %>
+    <p><%= link_to r.name, recipe_path(r) %></p>
+<% end %>
